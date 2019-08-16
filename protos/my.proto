@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package hero;
+
+service Execution {
+  rpc Execute(ExecuteRequest) returns (ExecuteResult) {}
+}
+
+message ExecuteRequest {
+  string instance_name = 1;
+}
+
+message ExecuteResult {
+  string name = 2;
+}
